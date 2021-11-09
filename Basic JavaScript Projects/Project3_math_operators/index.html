@@ -38,6 +38,34 @@
             </button>
         </div>
 
+        <div id="oper_Un">
+            <button onclick="negation_Operator()" id="Math7">presiona para saber el operador de negacion de 10
+            </button>
+        </div>
+
+        <div>
+            <p>a continuacion hay una variable (X) de valor 5 a la que se le aplicara un operador de incremento y posteriormente a la variable Y (con valor de 5.25) un operador de decremento</p>
+            <script>
+                var X = 5;
+                X++;
+                document.write(X);
+                document.write("<br>");
+                var Y = 5.25;
+                Y--;
+                document.write(Y);
+            </script>
+        </div>
+        <div>
+            <p>a continuacion se mostrara un numero aleatorio entre 0 y 10</p>
+            <script>
+                document.write(Math.random());
+            </script>
+            <p>a continuacion se mostrara un numero aleatorio entre 0 y 100</p>
+            <script>
+                document.write(Math.random()*100);
+            </script>
+        </div>
+
     </body>
 
 </html>
