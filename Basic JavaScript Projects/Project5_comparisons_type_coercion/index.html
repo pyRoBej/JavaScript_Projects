@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="./JS/main.js"></script>
+        
+    </head>
+
+    <body>
+        
+        <div>
+            <p>operador "tipo de "</p>
+            <script> //este es un ejemplo de operador segun el tipo palabra
+                document.write(typeof "word");
+            </script>
+            <br>
+            <script> //este es un ejemplo de operador segun el tipo numero
+                document.write(typeof 10);
+            </script>
+            <br>
+            <p>operador tipo coercion</p>
+            <script> //este es un ejemplo de operador cuando se pueden convinar cadenas y numeros (normalmente no se puede en otros lenguajes de programacion) 
+                document.write("10" + 5);
+            </script>
+        </div>
+        <div> <!-- ejemplos de logica booleana -->
+            <p>ejemplos de logica booleana</p> <!-- verdadero -->
+            <p id="Example1" onclick="logicBol()">
+                click me!
+            </p> 
+            <p id="Example2" onclick="logicBol2()"> <!-- falso -->
+                click me!
+            </p>
+            <p>ejemplo de logica booleana 3</p> <!-- verdadero -->
+            <p id="Example3" onclick="logicBol3()">
+                click me!
+            </p> 
+        </div>
+
+        <div> <!--- ejemplo de signos iguales -->
+            <p>ejemplo de logica booleana 4 (signos iguales)</p> <!-- verdadero -->
+            <p id="example1" onclick="signosIgual1()">
+                click me!
+            </p>
+            <p id="example2" onclick="signosIgual2()"> <!--- falso escribiendo un tipo de datos diferente y un valor diferente -->
+                click me!
+            </p>
+            <p id="example3" onclick="signosIgual3()"> <!--- falso escribiendo un tipo de datos diferente pero el mismo valor para ambos-->
+                click me!
+            </p>
+            <p id="example4" onclick="signosIgual4()"> <!--- falso escribiendo el mismo tipo de datos pero con un valor diferente para ambos.-->
+                click me!
+            </p>
+        </div>
+
+        <div> <!-- ejemplos de operadores logicos -->
+            <p>ejemplo de operadores logicos (signos && )</p> <!-- verdadero -->
+            <p id="ejemplo1" onclick="oper_log1()">
+                click me!
+            </p>
+            <p id="ejemplo2" onclick="oper_log2()"> <!-- falso -->
+                click me!
+            </p>
+            <p>ejemplo de operadores logicos (signos || )</p>
+            <p id="ejemplo3" onclick="oper_log3()"> <!-- verdadero -->
+                click me!
+            </p>
+            <p id="ejemplo4" onclick="oper_log4()"> <!-- falso -->
+                click me!
+            </p>
+        </div>
+        <div><!-- ejemplos de operadores logicos -->
+            <p>ejemplo de operadores logicos (signos ! )</p> <!-- verdadero -->
+            <p id="ejemplo5" onclick="oper_log5()">
+               click me!
+            </p>
+            <p id="ejemplo6" onclick="oper_log6()"> <!-- falso -->
+                click me!
+             </p>
+        </div>
+
+        <div>
+            <p>
+                En codigo hay un ejemplo del metodo console.log donde se hace la operacion 2+2,
+                el resultado se muestra en la consola ( para verlo haga clic en fn + F12 y luego en "Consola",
+                o Ctrl + Shift + I y luego haz clic en "Consola")
+                el resultado es 4, en consola debe poder ver 4.
+            </p>
+            <script> //ejemplo del metodo console.log, donde el resultado se muestra en la consola (hacer clic en "F12" y luego en "Consola", Escribe Ctrl + Shift + I y luego haz clic en "Consola")
+                console.log(2+2);
+            </script>
+        </div>
+
+        <div>
+            <script>
+                console.log(10 < 2 );
+            </script>
+        </div>
+
+    </body>
+
+</html>

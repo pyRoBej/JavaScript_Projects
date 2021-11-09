@@ -38,3 +38,16 @@ function negation_Operator() {
     var x = 10;
     document.getElementById("Math7").innerHTML = -x;
 }
+
+function my_Function_Nan() {
+    document.getElementById("Test").innerHTML = 0/0;
+}
+
+function my_Function_isNan() {
+    document.getElementById("Test2").innerHTML = isNaN('esto es una cadena');
+    document.getElementById("Test3").innerHTML = isNaN('007');
+}
+
+function my_Function_infinite() {
+    document.getElementById("Test4").innerHTML = 0/0;
+}
