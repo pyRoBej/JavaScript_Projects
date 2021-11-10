@@ -90,6 +90,10 @@
     color: whitesmoke;  
     text-align: center;
   }
+
+  p {
+    color: white;
+  }
   
   @-webkit-keyframes fade {
     from {opacity: .4} 
