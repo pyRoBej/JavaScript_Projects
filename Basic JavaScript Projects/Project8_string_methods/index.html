@@ -13,6 +13,53 @@
         <p id="concat"></p>
         <button onclick="full_sentence()">click here for a sentence</button>
 
+        <div> <!--metodo slide --> </div>
+        <p id="slice"></p>
+        <button onclick="slice_method()"> click here! </button>
+
+        <div> <!-- metodo toUpperCase() converts a string to uppercase letters: --> </div>
+            <p id="demo"></p>
+             <script>
+                 let text = "Ejemplo de upperCase";
+                 let result = text.toUpperCase();
+                  document.getElementById("demo").innerHTML = result;
+            </script>
+        
+        <div> <!-- metodo search() search busca una cadena para un valor especificado y devuelve la posicion de la coincidencia: --> </div>
+
+        <p id="demo2"></p>
+        <script>
+            let text2 = "Ejemplo de metodo search()"; 
+            document.getElementById("demo2").innerHTML = text2.search("metodo");
+        </script>
+
+        <div> <!-- metodos numericos --> </div>
+        <p id="numbers_to_string"></p>
+        <button onclick="string_method()"> click here! </button>
+
+        <div> <!-- metodo precision --> </div>
+        <p id="precision"></p>
+        <button onclick="precision_method()"> click here!</button>
+
+        <div> <!-- metodo toFixed() convierte un numero en una cadena, redondeando a un numero especifico de decimales: --> </div>
+
+        <p id="demo3"></p>
+        <script>
+            let num = 5.5679; 
+            let n = num.toFixed(2);
+
+            document.getElementById("demo3").innerHTML = n;
+        </script>
+
+        <div> <!-- metodo value() devuelve el valor de una cadena --> </div>
+
+        <p id="demo4"></p>
+        <script>
+            let str = "Ejemplo de metodo value()"; 
+            document.getElementById("demo4").innerHTML = str.valueOf();
+        </script>
+        
+
     </body>
 
 </html>
