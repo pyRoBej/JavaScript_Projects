@@ -1,50 +1,50 @@
-// crates an object to keep track of values
+// almacena un objeto para realizar un seguimiento de los valores
 const Calculator = {
-    // this is display 0 on the screen
+    // esto se muestra 0 en la pantalla
     Display_Value: '0',
-    //this will hold the first operdand for any expressions, we set it to null for
+    // esto contendrá la primera operación y para cualquier expresión, lo establecemos en nulo para
     First_Operand: false,
-    // this will hold the operator we set it to null for now
+    // esto mantendrá el operador, lo configuramos como nulo por ahora
     operator: null,
     };
 
-    //this modifies values each time a buttom is clicked
+    // esto modifica los valores cada vez que se hace clic en un botón
     function Input_Digit(digit){
         const { Display_Value, Wait_Second_Operand } = Calculator;
-        // we are checking to see if wait second operand is true and set
-        //display value to the key that was clicked
+        // estamos comprobando si esperar el segundo operando es verdadero y establecemos
+        // muestra el valor de la clave en la que se hizo clic
         if(Wait_Second_Operand === true){
             Calculator.Display_Value = digit;
             Calculator.Wait_Second_Operand = false;
 
         } else {
-            //this overwrites Display value if the current value is 0
-            //otherwise it adds onto it
+            // esto sobrescribe el valor de visualización si el valor actual es 0
+            // de lo contrario, se agrega
             Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
 
         }
     }
-    //this section handles decimal points
+    // esta sección maneja puntos decimales
     function Input_Decimal (dot){
-        //this ensures that accidental clicking of the decimal point
-        //does not cause bug in your operation
+        // esto asegura que el clic accidental del punto decimal
+        // no causa errores en su operación
         if (Calculator.Wait_Second_Operand === true) return;
         if(!Calculator.Display_Value.includes(dot)){
-            //we are saying that if he display value does not contain a decimal point
-            //we want to add a decimal point
+            // estamos diciendo que si el valor de visualización no contiene un punto decimal
+            // queremos agregar un punto decimal
             Calculator.Display_Value += dot;
         }
     }
 
-    //this section handles operators
+     // esta sección maneja operadores
     function Handle_Operator(Next_Operator){
         const { First_Operand, Display_Value, operator}=Calculator
-        //when an operator key is pressed we convert the current number
-        //dispplayed on the screen to a number and then store the result in
-        // calculator.firtoperand if it does not already exist
+        // cuando se presiona una tecla de operador, convertimos el número actual
+        // se muestra en la pantalla a un número y luego almacena el resultado en
+        // calculator.firtoperand si aún no existe
         const Value_of_Input = parseFloat(Display_Value);
-        //check if an operator already exists and if wait seconf operand is true
-        //then updates thee operator and exist from the function
+        // verifica si ya existe un operador y si esperar segundo operando es verdadero
+        // luego actualiza el operador y existe desde la función
         if (operator && Calculator.Wait_Second_Operand) {
             Calculator.operator = Next_Operator;
             return;
@@ -52,15 +52,15 @@ const Calculator = {
         if (First_Operand == null){
             Calculator.First_Operand = Value_of_Input;
         }else if (operator) {
-            //cheacks if an operator already exists
+            // comprueba si ya existe un operador
             const Value_Now = First_Operand || 0 ;
-            //if operator exists, property lookup is perfomed for the operator
-            //in the perform calculation object and the function that matches the
-            //operator is executed
+            // si el operador existe, la búsqueda de propiedades se realiza para el operador
+            // en el objeto de realizar el cálculo y la función que coincide con el
+            // se ejecuta el operador
             let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
-            //here we add a fixed amount of number after the decimal
+            // aquí agregamos una cantidad fija de número después del decimal
             result = Number(result).toFixed(9)
-            //this will remove any trailing 0s
+            // esto eliminará los ceros finales
             result = (result * 1).toString()
             Calculator.Display_Value = parseFloat(result);
             Calculator.First_Operand = parseFloat(result);
