@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="./JavaScript_1.js"></script>
+    </head>
+    <body>
+        
+        <div> <!-- elemento canvas --> </div>
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+        <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        var grd = ctx.createLinearGradient(0, 0, 170, 0);
+        grd.addColorStop(0, "black");
+        grd.addColorStop(1, "white");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(20, 20, 150, 100);
+        </script>
+
+        <div> <!-- metodo getElementByClassName --> </div>
+        <h1 class="click">This text will change! </h1>
+        <h3 class="click">This text will not change.</h3>
+        <button onclick="Hola_mundo_funct()">click me to change text! </button>
+
+        
+    </body>
+</html>
