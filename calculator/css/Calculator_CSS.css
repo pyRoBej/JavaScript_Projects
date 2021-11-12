@@ -4,7 +4,7 @@
 
 /* este contenedor incluye las propiedades de la pagina */
 html {
-	font-size: 70;
+	font-size: 70%;
 	box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ html {
 
 /* este contenedor incluye las propiedades de la calculadora propiamente */
 .calculator {
-	border: 1.2px;
+	border: 1.2px solid darkslategray;
 	border-radius: 7px;
 	position: absolute;
 	top: 50%;
@@ -79,7 +79,7 @@ button:hover {
 	border-color: darkslategray;
 	color: #fff;
 	height: 100%;
-	grid-area: 2/4/6/5;
+	grid-area: 2 / 4 / 6 / 5;
 }
 /* este contenedor incluye las propiedades de animacion del signo igual cuando los presionas) */
 .equal-sign:hover {

@@ -3,7 +3,8 @@ const Calculator = {
     // esto se muestra 0 en la pantalla
     Display_Value: '0',
     // esto contendrá la primera operación y para cualquier expresión, lo establecemos en nulo para
-    First_Operand: false,
+    First_Operand: null,
+    Wait_Second_Operand: false,
     // esto mantendrá el operador, lo configuramos como nulo por ahora
     operator: null,
     };
@@ -21,15 +22,14 @@ const Calculator = {
             // esto sobrescribe el valor de visualización si el valor actual es 0
             // de lo contrario, se agrega
             Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
-
         }
     }
     // esta sección maneja puntos decimales
-    function Input_Decimal (dot){
+    function Input_Decimal(dot) {
         // esto asegura que el clic accidental del punto decimal
         // no causa errores en su operación
         if (Calculator.Wait_Second_Operand === true) return;
-        if(!Calculator.Display_Value.includes(dot)){
+        if(!Calculator.Display_Value.includes(dot)) {
             // estamos diciendo que si el valor de visualización no contiene un punto decimal
             // queremos agregar un punto decimal
             Calculator.Display_Value += dot;
@@ -38,7 +38,7 @@ const Calculator = {
 
      // esta sección maneja operadores
     function Handle_Operator(Next_Operator){
-        const { First_Operand, Display_Value, operator}=Calculator
+        const { First_Operand, Display_Value, operator} = Calculator
         // cuando se presiona una tecla de operador, convertimos el número actual
         // se muestra en la pantalla a un número y luego almacena el resultado en
         // calculator.firtoperand si aún no existe
@@ -49,7 +49,7 @@ const Calculator = {
             Calculator.operator = Next_Operator;
             return;
         }
-        if (First_Operand == null){
+        if (First_Operand == null) {
             Calculator.First_Operand = Value_of_Input;
         }else if (operator) {
             // comprueba si ya existe un operador
@@ -121,6 +121,6 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
-    Input.Digit(target.value);
+    Input_Digit(target.value);
     Update_Display();
 })
