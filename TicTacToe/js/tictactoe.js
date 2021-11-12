@@ -8,7 +8,7 @@ function placeXOrO(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
-            select.style.backgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/shoes.png")';
         } else {
             select.style.backgroundImage = 'url("images/o.png")';
         }
@@ -20,7 +20,7 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
         // esta funcion reproduce el sonido de la ubicacion
-        audio('./media/place.mp3');
+        audio('./media/ding.mp3');
         if (activePlayer === 'O') {
             disableClick();
             setTimeout(function() { computersTurn(); }, 1000)
@@ -62,7 +62,7 @@ function checkWinConditions() {
     // Esta condicion comprueba el empate y si no se cumple ninguna de las anteriores
     else if (selectedSquares.length >= 9) {
         // esta funcion toca el sonido
-        audio('./media/tie.mp3');
+        audio('./media/sword.mp3');
         //esta funcion establece 3 segundos antes de resetearse
         setTimeout(function() { resetGame (); }, 1000);
     }
@@ -137,7 +137,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     }
     //esta linea no permite hacer click mientras el sonido de win esta sonando
     disableClick();
-    audio('./media/winGame.mp3');
+    audio('./media/victory.mp3');
     animateLineDrawing();
     setTimeout(function() { clear(); resetGame(); }, 1000);
 }
