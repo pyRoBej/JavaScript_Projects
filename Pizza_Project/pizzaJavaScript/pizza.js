@@ -11,16 +11,16 @@ function getReceipt(){
             text1 = text1+ selectedSize+"<br>";
         }
     }
-    if (selectedSize === "Personal Pizza") {
+    if (selectedSize === "Filius Flitwick") {
         sizeTotal = 6;
-    } else if (selectedSize === "Small Pizza") {
+    } else if (selectedSize === "Hermione Granger") {
         sizeTotal = 8;
-    } else if (selectedSize === "Medium Pizza") {
+    } else if (selectedSize === "Lord Voldemort") {
         sizeTotal = 10;
-    } else if (selectedSize === "Large Pizza") {
+    } else if (selectedSize === "Albus dumbledore") {
         sizeTotal = 14;
-    } else if (selectedSize === "Extra Large Pizza") {
-        sizeTotal = 16;
+    } else if (selectedSize === "Rubeus Hagrig") {
+        sizeTotal = 20;
     }
     runningTotal = sizeTotal;
     console.log(selectedSize+" = $"+ sizeTotal+".00");
@@ -34,7 +34,7 @@ function getReceipt(){
         var toppingTotal = 0;
         var selectedTopping = [];
         var toppingArray = document.getElementsByClassName("toppings");
-        for (var j = 0; j< toppingArray.length;j++){
+        for (var j = 0; j< toppingArray.length; j++){
             if ( toppingArray[j].checked){
                 selectedTopping.push(toppingArray[j].value);
                 console.log("selected topping item: ("+toppingArray[j].value+")");
@@ -56,3 +56,35 @@ function getReceipt(){
         document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+
         runningTotal+".00"+"</strong></h3>";
     }; 
+
+    function getReceipt2(){
+        // esto inicializa nuestra cadena para que pueda pasar de
+    // función para funcionar creciendo línea por línea en un recibo completo
+        var text1 = "<h3> You Ordered:</h3>";
+        var runningTotal = 0;
+        var sizeTotal = 0;
+        var sizeArray = document.getElementsByClassName("size");
+        for (var i = 0; i < sizeArray.length; i++) {
+            if (sizeArray[i].checked){
+                var selectedSize = sizeArray[i].value;
+                text1 = text1+ selectedSize+"<br>";
+            }
+        }
+        if (selectedSize === "Filius Flitwick") {
+            sizeTotal = 6;
+        } else if (selectedSize === "Hermione Granger") {
+            sizeTotal = 8;
+        } else if (selectedSize === "Lord Voldemort") {
+            sizeTotal = 10;
+        } else if (selectedSize === "Albus dumbledore") {
+            sizeTotal = 14;
+        } else if (selectedSize === "Rubeus Hagrig") {
+            sizeTotal = 20;
+        }
+        runningTotal = sizeTotal;
+        console.log(selectedSize+" = $"+ sizeTotal+".00");
+        console.log("size text1: " + text1);    
+        console.log("subtotal: $"+runningTotal+ ".00");
+        // estas variables se pasarán a cada función
+        getTopping(runningTotal, text1);
+        };

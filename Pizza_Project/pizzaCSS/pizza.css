@@ -5,38 +5,38 @@
 /* este contenedor incluye las propiedades de menuBG */
 #menuBG {
 	width: 400px;
-	height: 470px;
+	height: 750px;
 	margin: 10px auto;
 }
 
 #frMenu {
 	width: 400px;
-	height: 200px;
+	height: 1000px;
 }
 
 #totalPrice {
 	width: 200px;
 	height: 190px;
-	margin: 0 auto;
+	margin: 50px auto;
 	float: right;
 }
 
 .left {
 	width: 200px;
-	height: 200px;
+	height: 800px;
 	float: left;
 }
 
 .right {
 	width: 200px;
-	height: 200px;
+	height: 800px;
 	float: right;
 }
 
 #showText {
 	width: 200px;
 	height: 190px;
-	margin: 0px auto;
+	margin: 100px auto;
 	float: left;
 }
 
@@ -51,6 +51,20 @@
 	margin: 10px 0px 0px 100px;
 	width: 100px;
 	height: 40px;
+	size: 35px;
+	background-color: crimson;
+	color: whitesmoke;
+	border-color: tomato;
+}
+
+#btnOrder2 {
+	margin: 50px 0px 0px 0px;
+	width: 100px;
+	height: 40px;
+	size: 35px;
+	background-color: crimson;
+	color: whitesmoke;
+	border-color: tomato;
 }
 
 h1 {
@@ -72,8 +86,7 @@ div {
 	color: darkorchid;
 }
 
-#btnOrder {
-	background-color: crimson;
-	color: whitesmoke;
-	border-color: tomato;
+p {
+	color: black;
+	font-size: small;	
 }
