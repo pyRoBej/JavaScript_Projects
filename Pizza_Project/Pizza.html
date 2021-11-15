@@ -12,7 +12,7 @@
         <div id="menuBG">
             <h1 style="margin: 0 0px 0 20px;">Harry Potter Burgers.</h1>
             <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">      
-            <form id="frmMenu">
+            <form id="frmMenu" style="width: 650px">
                 <div class="menu left">
                     <h2>Size:</h2>
                     <input class="size" type="radio" name="Size" value="Filius Flitwick"> Filius Flitwick <p> (Small) </p><br>
@@ -22,17 +22,21 @@
                     <input class="size" type="radio" name="Size" value="Rubeus Hagrig"> Rubeus Hagrig <p> (Extra Extra Large) </p><br>
                 </div>
 
-
-                <div class="menu right">
+                <div class="menu center">
                     <h2>Ingredientes:</h2>
                     <input class="toppings" type="checkbox" name="Topping" value="Potter"> Potter: <p> Clasica cheeseburger de sirloin, camarones salteados con mantequilla y cajún, mayonesa y chipotle. </p><br>
                     <input class="toppings" type="checkbox" name="Topping" value="Weasley"> Weasley: <p> Clasica cheeseburger de sirloin, bbq, cheddar gratinado y aros de cebolla. </p><br>
                     <input class="toppings" type="checkbox" name="Topping" value="Lupin"> Lupin: <p> Carne de pastor, doble queso gratinado, piña asada, guacamole, cebolla morada y cilantro. </p><br>
                     <input class="toppings" type="checkbox" name="Topping" value="Dumbledore"> Dumbledore: <p> Clasica cheeseburger de sirloin, tocino, doble queso, tomate deshidratado y vegetales frescos. </p><br>
+                </div>
+
+                <div class="menu right">
+                    <h2>Ingredientes:</h2>
                     <input class="toppings" type="checkbox" name="Topping" value="Granger"> Granger: <p> Crujiente pechuga de pollo, queso blanco gratinado, mayonesa y vegetales frescos. </p><br>
                     <input class="toppings" type="checkbox" name="Topping" value="Muggle"> Muggle: <p> Clasica cheeseburger de sirloin, cheddar gratinado, mayonesa y vegetales frescos. </p><br>
                     <input class="toppings" type="checkbox" name="Topping" value="Lovegood"> Lovegood: <p> Jugoso portobello a la plancha, pulpa de aguacate, queso de cabra, queso blanco gratinado y vegetales frescos. </p><br>
                 </div>
+
                 <div id="cart">
                     <input id="btnOrder2" type="button" onclick="getReceipt2()" value="Place Order">
                     <div id="showText"></div>
